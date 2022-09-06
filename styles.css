@@ -1,0 +1,62 @@
+html,
+body,
+input,
+select,
+textarea {
+  font-size: 1.05em !important;
+}
+
+.days-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
+
+.badge {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 0 0 20px 0;
+  box-shadow: -4px 5px 0px #a8f1f3;
+}
+
+.panel-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.badge-info {
+  font-family: sans-serif;
+  color: #fff;
+  background-color: #17a2b8;
+}
+
+.animate {
+  animation: show 1s ease-out both;
+}
+
+.btn.animate {
+  animation-delay: 0.75s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 100;
+    transform: translateY(0);
+  }
+}

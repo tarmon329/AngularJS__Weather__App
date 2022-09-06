@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div ng-show="city">
+      <div ng-show="weatherResult">
+        <h1>This is the forecast for {{weatherResult.location.name}}:</h1>
+        <hr />
+        <nav class="days-nav">
+          Days:
+          <a
+            href="#/forecast/{{i}}"
+            ng-class="{'bg-info': days === {{i}}}"
+            ng-repeat="i in weekDays"
+            >{{i}}</a
+          >
+        </nav>
+        <hr />
+        <div ng-repeat="day in weatherResult.forecast.forecastday">
+          <div class="row animate">
+            <div class="col-md-12">
+              <weather-panel
+                day="day"
+                get-Weekday="getWeekDay(dayObj)"
+                temp-Cel="tempCel(degree)"
+              ></weather-panel>
+            </div>
+          </div>
+        </div>
+        <a href="#/" class="btn btn-primary animate">Change City Or Days</a>
+      </div>
+
+      <div ng-hide="weatherResult">
+        <h1>Please pick a valid city</h1>
+        <a href="#/" class="btn btn-primary">Back to the Home page</a>
+      </div>
+    </div>
+
+    <div ng-hide="city">
+      <h1>Please pick a city first</h1>
+      <a href="#/" class="btn btn-primary">Back to the Home page</a>
+    </div>
+  </div>
+</div>

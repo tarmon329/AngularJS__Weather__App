@@ -1,0 +1,15 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div class="panel-title text-center">
+      {{getWeekday({dayObj:day.date})}} &mdash; {{day.date | date:
+      'mediumDate'}}
+    </div>
+  </div>
+  <div class="panel-body">
+    <span class="badge badge-pill badge-info"
+      >{{tempCel({degree:day.day.avgtemp_c})}}</span
+    >
+    <img src="{{day.day.condition.icon}}" alt="condition" />
+    <p>{{day.day.condition.text}}</p>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <h1>Forecast by City</h1>
+    <form class="form-group" ng-submit="submitHandler()">
+      <label for="city">Pick Location:</label>
+      <input
+        id="city"
+        type="text"
+        placeholder="For example: Haifa"
+        required
+        class="form-control"
+        ng-model="city"
+      />
+      <label for="days"
+        >Forcast for the next {{days}} <span ng-show="{{days>1}}">days</span>
+        <span ng-show="{{days===1}}">day</span>:</label
+      >
+      <input
+        id="days"
+        type="number"
+        min="1"
+        max="7"
+        class="form-control"
+        ng-model="days"
+      />
+      <button class="btn btn-primary">Get Forecast</button>
+    </form>
+  </div>
+</div>
